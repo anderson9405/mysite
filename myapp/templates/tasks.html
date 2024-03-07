@@ -1,0 +1,21 @@
+{% extends 'cabecera.html' %}
+
+{% block content %}
+<h1>Tareas</h1>
+
+<div class="card">
+    {% for task in tareas %}
+    <p>{{task.title}} - {{task.descripcion}}
+
+        {% if task.isDone == False %}
+        ---->⏰
+        {% else %}
+        ---> ✅
+        {% endif %}
+    </p>
+
+    {% endfor %}
+</div>
+
+    <button>Delete</button>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'cabecera.html' %}
+
+{% block content %}
+
+<h1>{{project}}</h1>
+
+<div class="card">
+    {% for task in tasks %}
+        <p>{{task.title}} - {{task.descripcion}}</p>
+    {% endfor %}
+</div>
+
+{% endblock %}

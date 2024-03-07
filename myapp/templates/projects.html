@@ -1,0 +1,17 @@
+{% extends 'cabecera.html' %}
+
+{% block content %}
+    <h1>Proyectos</h1>
+
+<div class=" card">
+    {% for project in proyectos %}
+    <td>
+        <ul>
+            <a href="{% url 'project_detalle' project.id %}">
+                <h1>{{project.name}}</h1>
+            </a>
+        </ul>
+    </td>
+    {% endfor %}
+</div>
+{% endblock %}

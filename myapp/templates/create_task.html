@@ -1,0 +1,12 @@
+{% extends 'cabecera.html' %}
+
+{% block content %}
+<h1>Creación de tareas</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button>Save</button>
+</form>
+
+{% endblock %}
